@@ -1,159 +1,401 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>resume</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
-  <style type="text/css">
-  /*
-   * Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
-   *
-   * CSS for making a resume with pandoc. Inspired by moderncv.
-   *
-   * This CSS document is delivered to you under the CC BY-SA 3.0 License.
-   * https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
-   */
+<title>homepage.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
-  /* Whole document */
-  body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      background: #FFFFFF;
-      padding: 10px 10px 10px 10px;
-  }
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
-  /* Title of the resume */
-  h1 {
-      font-size: 55px;
-      color: #757575;
-      text-align:center;
-      margin-bottom:15px;
-  }
-  /* h1:hover { */
-  /*     background-color: #757575; */
-  /*     color: #FFFFFF; */
-  /*     text-shadow: 1px 1px 1px #333; */
-  /* } */
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
 
-  /* Titles of categories */
-  h2 {
-      /* This is called "sectioncolor" in the ConTeXt stylesheet. */
-      color: #397249;
-  }
-  /* There is a bar just before each category */
-  h2:before {
-      content: "";
-      display: inline-block;
-      margin-right:1%;
-      width: 16%;
-      height: 10px;
-      /* This is called "rulecolor" in the ConTeXt stylesheet. */
-      background-color: #9CB770;
-  }
-  /* h2:hover { */
-  /*     background-color: #397249; */
-  /*     color: #FFFFFF; */
-  /*     text-shadow: 1px 1px 1px #333; */
-  /* } */
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
 
-  /* Definitions */
-  dt {
-      float: left;
-      clear: left;
-      width: 17%;
-      font-weight: bold;
-  }
-  dd {
-      margin-left: 17%;
-      margin-bottom:7px;
-  }
-  p {
-      margin-top:0;
-      margin-bottom:7px;
-  }
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
 
-  /* Blockquotes */
-  blockquote {
-      text-align: center
-  }
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
 
-  /* Links */
-  a {
-      text-decoration: none;
-      color: #397249;
-  }
-  a:hover, a:active {
-      background-color: #397249;
-      color: #FFFFFF;
-      text-decoration: none;
-      text-shadow: 1px 1px 1px #333;
-  }
+body.showEditorSelection .code-line {
+	position: relative;
+}
 
-  /* Horizontal separators */
-  hr {
-      color: #A6A6A6;
-  }
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
 
-  table {
-      width: 100%;
-  }
-  </style>
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
 <h1 id="haruta-uchino">Haruta Uchino</h1>
 <h2 id="education">EDUCATION</h2>
-<dl>
-<dt>Apr 2024-Mar 2026(expected)</dt>
-<dd><p><strong>Master, Electrical Engineering and Electronics; Kogakuin University</strong> , Tokyo, Japan</p>
-</dd>
-<dt>Apr 2019-Mar 2023</dt>
-<dd><p><strong>BSc, Computer Science and Engineering; University of Aizu</strong>, Fukushima, Japan</p>
-</dd>
-</dl>
-<h2 id="work-experience">WORK EXPERIENCE</h2>
-<dl>
-<dt>Dec 2023-Now</dt>
-<dd><p><a href="https://www.aist.org/home" target="_blank"><strong>National Institute of Advanced Industrial Science and Technology, AIST</strong></a></p>
-</dd>
-<dd><strong>Technical Stuff</strong> : <a href="https://www.digiarc.aist.go.jp//en/team/ccirt/" target="_blank">Computing Continuum Infrastructure Research Team</a>, <a href="https://www.digiarc.aist.go.jp/en/" target="_blank">Digital Architecture Research Center</a>.
-</dd>
-<dd>I am engaged in <a href="https://www.nedo.go.jp/english/activities/activities_ZZJP_100172.html" target="_blank">the Post-5G Information and Communication Systems Infrastructure Enhancement R&amp;D Project</a> sponsored by <a href="https://www.nedo.go.jp/" target="_blank">New Energy and Industrial Technology Development Organization, NEDO</a> as an auxiliary.
-</dd>
-</dl>
+<p>Apr 2024-Mar 2026(expected)</p>
+<p>: <strong>Master, Electrical Engineering and Electronics; Kogakuin University</strong> , Tokyo, Japan​</p>
+<p>Apr 2019-Mar 2023
+: <strong>BSc, Computer Science and Engineering; University of Aizu</strong>, Fukushima, Japan</p>
+<ul>
+<li>Undergraduate research made changes to the educational processor Ridecore to add simplified cryptographic instructions. The architecture used was RISC-V32 with a compiler changes.</li>
+</ul>
+<p>​</p>
+<h2 id="experience">EXPERIENCE</h2>
+<p>Dec 2023-Now
+: <a href="https://www.aist.org/home"><strong>National Institute of Advanced Industrial Science and Technology, AIST</strong></a></p>
+<p>: <strong>Technical Stuff</strong> : <a href="https://www.digiarc.aist.go.jp//en/team/ccirt/">Computing Continuum Infrastructure Research Team</a>, <a href="https://www.digiarc.aist.go.jp/en/">Digital Architecture Research Center</a>.</p>
+<p>: I am engaged in <a href="https://www.nedo.go.jp/english/activities/activities_ZZJP_100172.html">the Post-5G Information and Communication Systems Infrastructure Enhancement R&amp;D Project</a> sponsored by <a href="https://www.nedo.go.jp/">New Energy and Industrial Technology Development Organization, NEDO</a> as an auxiliary.</p>
+<p>​</p>
+<p>​</p>
 <h2 id="programming-specific-skills">PROGRAMMING-SPECIFIC SKILLS</h2>
-<dl>
-<dt>Programming Languages</dt>
-<dd><strong>C :</strong> I learned C as an undergraduate and gained basic programming skills and an understanding of data structures and algorithms.
-</dd>
-<dd><p><strong>Verilog &amp; RISCV32 Assembly :</strong> I learned Verilog and RISCV32 Assembly as an undergraduate, making changes in Verilog to actual processors and extensions to the RISCV32 instruction set. This experience gave me a basic understanding of hardware description and assembly language and the ability to extend existing processors.</p>
-</dd>
-<dt>Systems Management</dt>
-<dd><p><strong>Network :</strong> I have some knowledge about Ethernet in Linux networking.</p>
-</dd>
-<dd><p><strong>Linux :</strong> It is the environment Ubuntu that I usually use and I have used Arch, Gentoo in the past.</p>
-</dd>
-<dd><p><strong>Tools :</strong> Icarus Verilog, GNU Binutils, strace, iperf3, gdb</p>
-</dd>
-</dl>
+<p>Programming Languages
+: <strong>C, Verilog &amp; RISCV32 Assembly</strong></p>
+<p>Systems Management
+: <strong>Ethernet</strong>
+​</p>
+<p>Tools
+: <strong>Icarus Verilog, GNU Binutils, strace, iperf3, gdb</strong></p>
+<p>​</p>
 <h2 id="my-area">MY AREA</h2>
 <ul>
 <li>I am interested in low layer OS memory allocator. I have knowledge of small data structures and parallel processing mechanisms, multi-threads.</li>
 </ul>
-<blockquote>
-<p><a href="mailto:email@example.com" class="email">email@example.com</a></p>
-</blockquote>
-<blockquote>
-<p><a href="">My profile</a></p>
-</blockquote>
+<h2 id="notes"><a href="https://www.harutauchino.github.io/notes.html">Notes</a></h2>
+
 </body>
 </html>
